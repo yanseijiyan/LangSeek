@@ -18,11 +18,13 @@ Welcome to the LangChain Agent Executor Project repository! This project demonst
 To set up the environment and install the necessary dependencies, execute the following command:
 
 ```bash
-pip install langchain langchain-community langchain-core langchain-experimental "langserve[all]" langchain-cli langsmith requests langchain-openai
-Usage
+pip install -r requeriments.txt
+```
+## Usage
 Configure the environment variables with your Google and OpenAI API keys:
 python
 Copy code
+```
 import os
 
 os.environ["GOOGLE_CSE_ID"] = "<your_google_cse_id>"
@@ -47,7 +49,8 @@ content_summaries = curate_content(topic)
 print("Summaries of Found Content:")
 for summary in content_summaries:
     print(summary)
-Features
+```
+## Features
 Integration with the Google Search API: Allows searching for internet content based on specific user interests.
 Automated Content Curation: Summarizes the contents found, providing a quick and efficient overview.
 Conversation Memory: Stores the interaction history, improving the contextualization of responses and user experience.
