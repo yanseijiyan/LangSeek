@@ -1,29 +1,34 @@
-LangChain Agent Executor Project
-This project demonstrates the integration of various LangChain functionalities, including the use of external APIs such as the Google Search API, to create an agent executor that performs searches based on user interests and summarizes relevant content found. The goal is to provide a solution for automated content curation, leveraging LangChain's text comprehension and generation capabilities.
+# LangChain Agent Executor Project
 
-Objectives
-Facilitate the research and curation of relevant content on the internet.
-Demonstrate the integration of LangChain with external APIs and the creation of intelligent agents.
-Provide a foundation for the development of more complex applications focused on the automation of search tasks and information synthesis.
-Prerequisites
-Python 3.8 or higher.
-Internet access for package installation and to perform searches using the Google API.
-Installation
-To set up the environment and install the necessary dependencies, execute:
+Welcome to the LangChain Agent Executor Project repository! This project demonstrates the integration of various LangChain functionalities, including the use of external APIs such as the Google Search API, to create an agent executor that performs searches based on user interests and summarizes relevant content found. The goal is to provide a solution for automated content curation, leveraging LangChain's text comprehension and generation capabilities.
 
-bash
-Copy code
+## Objectives
+
+- Facilitate the research and curation of relevant content on the internet.
+- Demonstrate the integration of LangChain with external APIs and the creation of intelligent agents.
+- Provide a foundation for the development of more complex applications focused on the automation of search tasks and information synthesis.
+
+## Prerequisites
+
+- Python 3.8 or higher.
+- Internet access for package installation and to perform searches using the Google API.
+
+## Installation
+
+To set up the environment and install the necessary dependencies, execute the following command:
+
+```bash
 pip install langchain langchain-community langchain-core langchain-experimental "langserve[all]" langchain-cli langsmith requests langchain-openai
 Usage
 Configure the environment variables with your Google and OpenAI API keys:
-
 python
 Copy code
+import os
+
 os.environ["GOOGLE_CSE_ID"] = "<your_google_cse_id>"
 os.environ["GOOGLE_API_KEY"] = "<your_google_api_key>"
 os.environ["OPENAI_API_KEY"] = "<your_openai_api_key>"
 Initialize and use the agent executor to perform searches and content curation:
-
 python
 Copy code
 # Google Search API Initialization
