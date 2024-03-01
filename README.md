@@ -26,13 +26,26 @@ python
 Copy code
 ```
 import os
+import os
+from langchain_community.utilities import GoogleSearchAPIWrapper
+from langchain.llms import OpenAI
+from langchain.agents import AgentExecutor, Tool, ZeroShotAgent
+from langchain.memory import SimpleMemory
+from langchain.agents import Agent
+from langchain.chains import LLMChain
+from langchain.prompts import PromptTemplate
+from langchain.memory import ConversationBufferMemory
 
 os.environ["GOOGLE_CSE_ID"] = "<your_google_cse_id>"
 os.environ["GOOGLE_API_KEY"] = "<your_google_api_key>"
 os.environ["OPENAI_API_KEY"] = "<your_openai_api_key>"
-Initialize and use the agent executor to perform searches and content curation:
+```
+
+## Initialize and use the agent executor to perform searches and content curation:
 python
 Copy code
+
+```
 # Google Search API Initialization
 search = GoogleSearchAPIWrapper()
 
