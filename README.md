@@ -26,14 +26,9 @@ python
 Copy code
 ```
 import os
-import os
 from langchain_community.utilities import GoogleSearchAPIWrapper
 from langchain.llms import OpenAI
 from langchain.agents import AgentExecutor, Tool, ZeroShotAgent
-from langchain.memory import SimpleMemory
-from langchain.agents import Agent
-from langchain.chains import LLMChain
-from langchain.prompts import PromptTemplate
 from langchain.memory import ConversationBufferMemory
 
 os.environ["GOOGLE_CSE_ID"] = "<your_google_cse_id>"
